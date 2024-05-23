@@ -57,7 +57,7 @@
 				Nuvix - Soluciones SaaS <br /> Integrales
 			</h1>
 			<p class="text-center text-[#D2D0DD] font-ESRebondGrotesqueTRIAL-Medium mt-5 text-xl">
-				Enkode ofrece herramientas avanzadas que simplifican la gestión empresarial, optimizan
+				Nuvix ofrece herramientas avanzadas que simplifican la gestión empresarial, optimizan
 				procesos y garantizan la seguridad de tus datos.
 			</p>
 			<div
@@ -441,7 +441,7 @@
 						Claridad y Confianza en Cada Paso
 					</h1>
 					<p class="text-[16px] text-white/50">
-						En ENKODE, creemos en la importancia de la transparencia. Mantenemos una comunicación
+						En Nuvix, creemos en la importancia de la transparencia. Mantenemos una comunicación
 						abierta y honesta con nuestros clientes, garantizando que estés siempre informado sobre
 						el estado de tus proyectos y los resultados que puedes esperar. Nuestra filosofía de
 						transparencia asegura que trabajamos juntos hacia objetivos comunes.
@@ -547,7 +547,7 @@
 						Resultados que Transforman tu Negocio
 					</h1>
 					<p class="text-[16px] text-white/50">
-						Con ENKODE, puedes esperar resultados medibles que impactan positivamente en tu negocio.
+						Con Nuvix, puedes esperar resultados medibles que impactan positivamente en tu negocio.
 						Desde el aumento de la eficiencia operativa hasta la mejora de la seguridad de tus
 						datos, nuestras soluciones están diseñadas para generar un crecimiento sostenible y una
 						ventaja competitiva en tu industria.
