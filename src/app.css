@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'ESRebondGrotesqueTRIAL-ExtraBold';
+  src: url('./font/ESRebondGrotesqueTRIAL-Extrabold-BF661890400e032.otf');
+}
+@font-face {
+    font-family: 'ESRebondGrotesqueTRIAL-Medium';
+    src: url('./font/ESRebondGrotesqueTRIAL-Medium-BF6618904088566.otf');
+  }
+
+@font-face {
+    font-family: 'ESRebondGrotesqueTRIAL-Light';
+    src: url('./font/ESRebondGrotesqueTRIAL-Light-BF66189040e6001.otf');
+  }
+
+  
