@@ -6,42 +6,45 @@
 
 	let width: number;
 
-	// Subscribe to the store to keep `width` updated
-	const unsubscribe = windowWidth.subscribe((value) => {
-		width = value;
-	});
+	const unsubscribe = windowWidth.subscribe((value) => (width = value));
 
-	// Cleanup subscription when component is destroyed
 	onDestroy(() => {
 		unsubscribe();
 	});
 </script>
 
+<svelte:head>
+	<title>Nuvix - Desarrollo de Sistemas SaaS & Software a medida</title>
+	<meta
+		name="description"
+		content="Nuvix - Somos una empresa de desarrollo de software que se enfoca en dar soluciones SaaS para que empresas puedan tener mejor funcionamiento alaburguer"
+	/>
+</svelte:head>
+
 <!-- Section main -->
 <section class="relative z-0">
-	<div class=" py-64 md:py-36 xl:py-24"
-	>
+	<div class=" py-64 md:py-36 xl:py-24">
 		<div
 			class="relative flex flex-wrap w-full justify-center py-16 opacity-20 rounded-full"
 			style="overflow: hidden; background: radial-gradient(50% 50% at 50% 50%, rgba(144, 123, 255, 0.7) 0%, rgba(144, 123, 255, 0) 100%);"
 		>
-		{#if width > 1024}
-			{#each Array(98) as _, i}
-				<span class="grid size-20 border-2 border-slate-500 opacity-[0.1]"/>
-			{/each}
-        {:else if width > 640}
-			{#each Array(50) as _, i}
-			<span class="grid size-20 border-2 border- opacity-[0.07]"/>
-			{/each}  
-        {:else if width > 420}
-			{#each Array(35) as _, i}
-			<span class="grid size-20 border-2 border-slate-500 opacity-[0.07]"/>
-			{/each}  
-        {:else if width > 0}
-			{#each Array(5) as _, i}
-			<span class="grid size-20 border-2 border-slate-500 opacity-[0.07]"/>
-			{/each}  
-		{/if}
+			{#if width > 1024}
+				{#each Array(98) as _, i}
+					<span class="grid size-20 border-2 border-slate-500 opacity-[0.1]" />
+				{/each}
+			{:else if width > 640}
+				{#each Array(50) as _, i}
+					<span class="grid size-20 border-2 border- opacity-[0.07]" />
+				{/each}
+			{:else if width > 420}
+				{#each Array(35) as _, i}
+					<span class="grid size-20 border-2 border-slate-500 opacity-[0.07]" />
+				{/each}
+			{:else if width > 0}
+				{#each Array(5) as _, i}
+					<span class="grid size-20 border-2 border-slate-500 opacity-[0.07]" />
+				{/each}
+			{/if}
 		</div>
 
 		<div
@@ -58,7 +61,7 @@
 				procesos y garantizan la seguridad de tus datos.
 			</p>
 			<div
-				class="  flex gap-5 
+				class="  flex gap-5
                  text-white font-ESRebondGrotesqueTRIAL-Medium mt-14"
 			>
 				<button class="py-3 px-8 bg-[#6C7AF1] rounded-2xl"> Soluciones </button>
@@ -185,7 +188,9 @@
 <!--Section solution-->
 <section class="static">
 	<div class="container py-20">
-		<section class="flex flex-col justify-center items-center xl:flex-row xl:justify-between xl:items-start py-20 gap-10">
+		<section
+			class="flex flex-col justify-center items-center xl:flex-row xl:justify-between xl:items-start py-20 gap-10"
+		>
 			<section class=" flex flex-col max-w-[636px]">
 				<header class="flex justify-center items-center">
 					<h2
@@ -194,19 +199,23 @@
 						Nuestras capacidades
 					</h2>
 				</header>
-				<h1 class="text-[56px] text-center xl:text-left text-white font-ESRebondGrotesqueTRIAL-Medium font-bold">
+				<h1
+					class="text-[56px] text-center xl:text-left text-white font-ESRebondGrotesqueTRIAL-Medium font-bold"
+				>
 					Soluciones que <br /> Impulsan tu Negocio
 				</h1>
-				<p class="text-[#D2D0DD] text-center xl:text-left text-xl font-ESRebondGrotesqueTRIAL-Medium font-semibold">
+				<p
+					class="text-[#D2D0DD] text-center xl:text-left text-xl font-ESRebondGrotesqueTRIAL-Medium font-semibold"
+				>
 					En Nuvix, nuestras soluciones están diseñadas para transformar tu negocio. Desde la
 					gestión eficiente hasta la escalabilidad, cada capacidad está enfocada en ofrecerte
 					resultados sobresalientes y un crecimiento sostenible.
 				</p>
 			</section>
 
-      <!--card solution-->
+			<!--card solution-->
 			<article class="flex flex-col gap-10">
-				<section class="flex gap-5 ">
+				<section class="flex gap-5">
 					<picture>
 						<div class="bg-[#313131] p-3 rounded-xl">
 							<svg
@@ -285,63 +294,101 @@
 					</div>
 				</section>
 
-        <section class="flex gap-5">
+				<section class="flex gap-5">
 					<picture>
 						<div class="bg-[#313131] p-3 rounded-xl">
-              <svg xmlns="http://www.w3.org/2000/svg" class="text-white text-[36px]" width="1em" height="1em" viewBox="0 0 256 256" {...$$props}>
-                <path fill="currentColor" d="M176 232a8 8 0 0 1-8 8H88a8 8 0 0 1 0-16h80a8 8 0 0 1 8 8m40-128a87.55 87.55 0 0 1-33.64 69.21A16.24 16.24 0 0 0 176 186v6a16 16 0 0 1-16 16H96a16 16 0 0 1-16-16v-6a16 16 0 0 0-6.23-12.66A87.59 87.59 0 0 1 40 104.49C39.74 56.83 78.26 17.14 125.88 16A88 88 0 0 1 216 104m-16 0a72 72 0 0 0-73.74-72c-39 .92-70.47 33.39-70.26 72.39a71.65 71.65 0 0 0 27.64 56.3A32 32 0 0 1 96 186v6h64v-6a32.15 32.15 0 0 1 12.47-25.35A71.65 71.65 0 0 0 200 104m-16.11-9.34a57.6 57.6 0 0 0-46.56-46.55a8 8 0 0 0-2.66 15.78c16.57 2.79 30.63 16.85 33.44 33.45A8 8 0 0 0 176 104a9 9 0 0 0 1.35-.11a8 8 0 0 0 6.54-9.23" />
-              </svg>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="text-white text-[36px]"
+								width="1em"
+								height="1em"
+								viewBox="0 0 256 256"
+								{...$$props}
+							>
+								<path
+									fill="currentColor"
+									d="M176 232a8 8 0 0 1-8 8H88a8 8 0 0 1 0-16h80a8 8 0 0 1 8 8m40-128a87.55 87.55 0 0 1-33.64 69.21A16.24 16.24 0 0 0 176 186v6a16 16 0 0 1-16 16H96a16 16 0 0 1-16-16v-6a16 16 0 0 0-6.23-12.66A87.59 87.59 0 0 1 40 104.49C39.74 56.83 78.26 17.14 125.88 16A88 88 0 0 1 216 104m-16 0a72 72 0 0 0-73.74-72c-39 .92-70.47 33.39-70.26 72.39a71.65 71.65 0 0 0 27.64 56.3A32 32 0 0 1 96 186v6h64v-6a32.15 32.15 0 0 1 12.47-25.35A71.65 71.65 0 0 0 200 104m-16.11-9.34a57.6 57.6 0 0 0-46.56-46.55a8 8 0 0 0-2.66 15.78c16.57 2.79 30.63 16.85 33.44 33.45A8 8 0 0 0 176 104a9 9 0 0 0 1.35-.11a8 8 0 0 0 6.54-9.23"
+								/>
+							</svg>
 						</div>
 					</picture>
 					<div>
 						<h1 class="text-white text-[28px] font-ESRebondGrotesqueTRIAL-ExtraBold">
-              Innovación Continua
-            </h1>
+							Innovación Continua
+						</h1>
 						<p class="text-white/50 text-[16px]">
-              Implementa soluciones de vanguardia que mantienen tu negocio a la par con las últimas tendencias tecnológicas, asegurando una ventaja competitiva en el mercado.
-            </p>
+							Implementa soluciones de vanguardia que mantienen tu negocio a la par con las últimas
+							tendencias tecnológicas, asegurando una ventaja competitiva en el mercado.
+						</p>
 					</div>
 				</section>
 
-        <section class="flex gap-5">
+				<section class="flex gap-5">
 					<picture>
 						<div class="bg-[#313131] p-3 rounded-xl">
-              <svg xmlns="http://www.w3.org/2000/svg" class="text-white text-[36px]" width="1em" height="1em" viewBox="0 0 24 24" {...$$props}>
-                <g fill="none">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-width="2.5" d="M21 15v-3a9 9 0 1 0-18 0v3" />
-                  <path fill="currentColor" d="M3 15v-1.25H1.75V15zm0 1.25h3v-2.5H3zM5.75 16v3h2.5v-3zm-1.5 3v-4h-2.5v4zm.75.75a.75.75 0 0 1-.75-.75h-2.5A3.25 3.25 0 0 0 5 22.25zm.75-.75a.75.75 0 0 1-.75.75v2.5A3.25 3.25 0 0 0 8.25 19zM6 16.25a.25.25 0 0 1-.25-.25h2.5A2.25 2.25 0 0 0 6 13.75zM21 15h1.25v-1.25H21zm-3 1.25h3v-2.5h-3zM19.75 15v4h2.5v-4zm-1.5 4v-3h-2.5v3zm.75.75a.75.75 0 0 1-.75-.75h-2.5A3.25 3.25 0 0 0 19 22.25zm.75-.75a.75.75 0 0 1-.75.75v2.5A3.25 3.25 0 0 0 22.25 19zM18 13.75A2.25 2.25 0 0 0 15.75 16h2.5a.25.25 0 0 1-.25.25z" />
-                </g>
-              </svg>
-            </div>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="text-white text-[36px]"
+								width="1em"
+								height="1em"
+								viewBox="0 0 24 24"
+								{...$$props}
+							>
+								<g fill="none">
+									<path
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-width="2.5"
+										d="M21 15v-3a9 9 0 1 0-18 0v3"
+									/>
+									<path
+										fill="currentColor"
+										d="M3 15v-1.25H1.75V15zm0 1.25h3v-2.5H3zM5.75 16v3h2.5v-3zm-1.5 3v-4h-2.5v4zm.75.75a.75.75 0 0 1-.75-.75h-2.5A3.25 3.25 0 0 0 5 22.25zm.75-.75a.75.75 0 0 1-.75.75v2.5A3.25 3.25 0 0 0 8.25 19zM6 16.25a.25.25 0 0 1-.25-.25h2.5A2.25 2.25 0 0 0 6 13.75zM21 15h1.25v-1.25H21zm-3 1.25h3v-2.5h-3zM19.75 15v4h2.5v-4zm-1.5 4v-3h-2.5v3zm.75.75a.75.75 0 0 1-.75-.75h-2.5A3.25 3.25 0 0 0 19 22.25zm.75-.75a.75.75 0 0 1-.75.75v2.5A3.25 3.25 0 0 0 22.25 19zM18 13.75A2.25 2.25 0 0 0 15.75 16h2.5a.25.25 0 0 1-.25.25z"
+									/>
+								</g>
+							</svg>
+						</div>
 					</picture>
 					<div>
 						<h1 class="text-white text-[28px] font-ESRebondGrotesqueTRIAL-ExtraBold">
-              Servicio Personalizado
-            </h1>
+							Servicio Personalizado
+						</h1>
 						<p class="text-white/50 text-[16px]">
-              Disfruta de soporte técnico y atención al cliente adaptados a las necesidades específicas de tu empresa, garantizando un funcionamiento óptimo y satisfacción continua.
-            </p>
+							Disfruta de soporte técnico y atención al cliente adaptados a las necesidades
+							específicas de tu empresa, garantizando un funcionamiento óptimo y satisfacción
+							continua.
+						</p>
 					</div>
 				</section>
 
-        <section class="flex gap-5">
+				<section class="flex gap-5">
 					<picture>
 						<div class="bg-[#313131] p-3 rounded-xl">
-              <svg xmlns="http://www.w3.org/2000/svg" class="text-white text-[36px]" width="1em" height="1em" viewBox="0 0 24 24" {...$$props}>
-                <path fill="currentColor" d="m16 11.78l4.24-7.33l1.73 1l-5.23 9.05l-6.51-3.75L5.46 19H22v2H2V3h2v14.54L9.5 8z" />
-              </svg>
-            </div>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="text-white text-[36px]"
+								width="1em"
+								height="1em"
+								viewBox="0 0 24 24"
+								{...$$props}
+							>
+								<path
+									fill="currentColor"
+									d="m16 11.78l4.24-7.33l1.73 1l-5.23 9.05l-6.51-3.75L5.46 19H22v2H2V3h2v14.54L9.5 8z"
+								/>
+							</svg>
+						</div>
 					</picture>
 					<div>
 						<h1 class="text-white text-[28px] font-ESRebondGrotesqueTRIAL-ExtraBold">
-              Crecimiento Escalable
-            </h1>
+							Crecimiento Escalable
+						</h1>
 						<p class="text-white/50 text-[16px]">
-              Nuestras soluciones se adaptan al ritmo de tu negocio, permitiendo una expansión sin problemas y un ajuste fácil a las demandas del mercado en constante cambio.
-            </p>
+							Nuestras soluciones se adaptan al ritmo de tu negocio, permitiendo una expansión sin
+							problemas y un ajuste fácil a las demandas del mercado en constante cambio.
+						</p>
 					</div>
 				</section>
-
 			</article>
 		</section>
 	</div>
@@ -349,96 +396,164 @@
 
 <!--section why Enkode -->
 <section class="static">
-  <div class="container py-20">
-      <h1 class=" text-[56px] text-center font-ESRebondGrotesqueTRIAL-Medium font-semibold text-transparent
+	<div class="container py-20">
+		<h1
+			class=" text-[56px] text-center font-ESRebondGrotesqueTRIAL-Medium font-semibold text-transparent
       bg-clip-text bg-gradient-to-r from-white to-white/70
-      ">
-        Por qué Nuvix es tu Elección Principal
-      </h1>
-      <p class="text-[#D2D0DD] text-xl text-center">
-        En Nuvix, nos dedicamos a ofrecer soluciones SaaS de calidad superior que transforman la manera en que gestionas tu negocio. Nuestra combinación de tecnología avanzada, atención al cliente excepcional y un enfoque en resultados tangibles nos convierte en tu aliado perfecto para alcanzar el éxito empresarial.
-      </p>
+      "
+		>
+			Por qué Nuvix es tu Elección Principal
+		</h1>
+		<p class="text-[#D2D0DD] text-xl text-center">
+			En Nuvix, nos dedicamos a ofrecer soluciones SaaS de calidad superior que transforman la
+			manera en que gestionas tu negocio. Nuestra combinación de tecnología avanzada, atención al
+			cliente excepcional y un enfoque en resultados tangibles nos convierte en tu aliado perfecto
+			para alcanzar el éxito empresarial.
+		</p>
 
-      <!--card why Enkode-->
-      <article class="flex flex-col gap-10 mt-10">
-        
-        <section class="flex flex-col lg:flex-row justify-center items-center rounded-2xl gap-14 p-6"
-          style="background: linear-gradient(113.01deg, #1C1C1C 0%, #3D3D3D 45.8%, #454545 100%);
+		<!--card why Enkode-->
+		<article class="flex flex-col gap-10 mt-10">
+			<section
+				class="flex flex-col lg:flex-row justify-center items-center rounded-2xl gap-14 p-6"
+				style="background: linear-gradient(113.01deg, #1C1C1C 0%, #3D3D3D 45.8%, #454545 100%);
           "
-        >
-          
-          <picture>
-            <div class="p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="text-white text-[70px]" width="1em" height="1em" viewBox="0 0 20 20" {...$$props}>
-                <path fill="currentColor" d="M10 4.5a6.5 6.5 0 0 0-4.601 11.091a.75.75 0 1 1-1.062 1.06a8 8 0 1 1 13.632-6.355a3 3 0 0 0-1.756-1.21A6.5 6.5 0 0 0 10 4.5m4.637 4.626A5.002 5.002 0 0 0 5 11c0 1.377.558 2.626 1.458 3.53a.75.75 0 0 0 1.063-1.06a3.5 3.5 0 1 1 5.811-3.544a3 3 0 0 1 1.305-.8M8 11a2 2 0 1 1 4 0a2 2 0 0 1-4 0m9.5 1a2 2 0 1 1-4 0a2 2 0 0 1 4 0m1.5 4.5c0 1.245-1 2.5-3.5 2.5S12 17.75 12 16.5a1.5 1.5 0 0 1 1.5-1.5h4a1.5 1.5 0 0 1 1.5 1.5" />
-              </svg>
-            </div>
-          </picture>
+			>
+				<picture>
+					<div class="p-2">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="text-white text-[70px]"
+							width="1em"
+							height="1em"
+							viewBox="0 0 20 20"
+							{...$$props}
+						>
+							<path
+								fill="currentColor"
+								d="M10 4.5a6.5 6.5 0 0 0-4.601 11.091a.75.75 0 1 1-1.062 1.06a8 8 0 1 1 13.632-6.355a3 3 0 0 0-1.756-1.21A6.5 6.5 0 0 0 10 4.5m4.637 4.626A5.002 5.002 0 0 0 5 11c0 1.377.558 2.626 1.458 3.53a.75.75 0 0 0 1.063-1.06a3.5 3.5 0 1 1 5.811-3.544a3 3 0 0 1 1.305-.8M8 11a2 2 0 1 1 4 0a2 2 0 0 1-4 0m9.5 1a2 2 0 1 1-4 0a2 2 0 0 1 4 0m1.5 4.5c0 1.245-1 2.5-3.5 2.5S12 17.75 12 16.5a1.5 1.5 0 0 1 1.5-1.5h4a1.5 1.5 0 0 1 1.5 1.5"
+							/>
+						</svg>
+					</div>
+				</picture>
 
-          <div class="flex flex-col gap-4">
-            <h1 class="text-white text-[28px] font-ESRebondGrotesqueTRIAL-Medium font-semibold ">
-              Claridad y Confianza en Cada Paso
-            </h1>
-            <p class="text-[16px] text-white/50">
-              En ENKODE, creemos en la importancia de la transparencia. Mantenemos una comunicación abierta y honesta con nuestros clientes, garantizando que estés siempre informado sobre el estado de tus proyectos y los resultados que puedes esperar. Nuestra filosofía de transparencia asegura que trabajamos juntos hacia objetivos comunes.
-            </p>
-          </div>
-        </section>
-        
-        <section class="flex flex-col lg:flex-row justify-center items-center rounded-2xl gap-14 p-6"
-          style="background: linear-gradient(113.01deg, #1C1C1C 0%, #3D3D3D 45.8%, #454545 100%);
-          "
-        >
-          
-          <picture>
-            <div class="p-2">
-				<svg xmlns="http://www.w3.org/2000/svg" class="text-[60px] text-white" width="1em" height="1em" viewBox="0 0 36 36" {...$$props}>
-					<path fill="currentColor" d="M12 16.14h-.87a8.67 8.67 0 0 0-6.43 2.52l-.24.28v8.28h4.08v-4.7l.55-.62l.25-.29a11 11 0 0 1 4.71-2.86A6.59 6.59 0 0 1 12 16.14" class="clr-i-solid clr-i-solid-path-1" />
-					<path fill="currentColor" d="M31.34 18.63a8.67 8.67 0 0 0-6.43-2.52a10.47 10.47 0 0 0-1.09.06a6.59 6.59 0 0 1-2 2.45a10.91 10.91 0 0 1 5 3l.25.28l.54.62v4.71h3.94v-8.32Z" class="clr-i-solid clr-i-solid-path-2" />
-					<path fill="currentColor" d="M11.1 14.19h.31a6.45 6.45 0 0 1 3.11-6.29a4.09 4.09 0 1 0-3.42 6.33Z" class="clr-i-solid clr-i-solid-path-3" />
-					<path fill="currentColor" d="M24.43 13.44a6.54 6.54 0 0 1 0 .69a4.09 4.09 0 0 0 .58.05h.19A4.09 4.09 0 1 0 21.47 8a6.53 6.53 0 0 1 2.96 5.44" class="clr-i-solid clr-i-solid-path-4" />
-					<circle cx="17.87" cy="13.45" r="4.47" fill="currentColor" class="clr-i-solid clr-i-solid-path-5" />
-					<path fill="currentColor" d="M18.11 20.3A9.69 9.69 0 0 0 11 23l-.25.28v6.33a1.57 1.57 0 0 0 1.6 1.54h11.49a1.57 1.57 0 0 0 1.6-1.54V23.3l-.24-.3a9.58 9.58 0 0 0-7.09-2.7" class="clr-i-solid clr-i-solid-path-6" />
-					<path fill="none" d="M0 0h36v36H0z" />
-				</svg>
-            </div>
-          </picture>
-          <div class="flex flex-col gap-4">
-            <h1 class="text-white text-[28px] font-ESRebondGrotesqueTRIAL-Medium font-semibold ">
-				Conoce a Nuestros Expertos
-			</h1>
-            <p class="text-[16px] text-white/50">
-				Nuestro equipo está compuesto por profesionales altamente calificados y apasionados por la tecnología. Cada miembro de nuestro equipo aporta una vasta experiencia y un enfoque dedicado para ofrecer soluciones innovadoras y eficaces. Con ENKODE, tienes a los mejores expertos trabajando para ti.
-			</p>
-          </div>
-        </section>
+				<div class="flex flex-col gap-4">
+					<h1 class="text-white text-[28px] font-ESRebondGrotesqueTRIAL-Medium font-semibold">
+						Claridad y Confianza en Cada Paso
+					</h1>
+					<p class="text-[16px] text-white/50">
+						En ENKODE, creemos en la importancia de la transparencia. Mantenemos una comunicación
+						abierta y honesta con nuestros clientes, garantizando que estés siempre informado sobre
+						el estado de tus proyectos y los resultados que puedes esperar. Nuestra filosofía de
+						transparencia asegura que trabajamos juntos hacia objetivos comunes.
+					</p>
+				</div>
+			</section>
 
-        <section class="flex flex-col lg:flex-row justify-center items-center rounded-2xl gap-14 p-6"
-          style="background: linear-gradient(113.01deg, #1C1C1C 0%, #3D3D3D 45.8%, #454545 100%);
+			<section
+				class="flex flex-col lg:flex-row justify-center items-center rounded-2xl gap-14 p-6"
+				style="background: linear-gradient(113.01deg, #1C1C1C 0%, #3D3D3D 45.8%, #454545 100%);
           "
-        >
-          
-          <picture>
-            <div class="p-2">
-				<svg xmlns="http://www.w3.org/2000/svg" class="text-[60px] text-white" width="1em" height="1em" viewBox="0 0 24 24" {...$$props}>
-					<g fill="none" stroke="currentColor" stroke-width="1.5">
-						<circle cx="16" cy="8" r="2" />
-						<path stroke-linecap="round" d="m2 12.5l1.752-1.533a2.3 2.3 0 0 1 3.14.105l4.29 4.29a2 2 0 0 0 2.564.222l.299-.21a3 3 0 0 1 3.731.225L21 18.5" />
-						<path stroke-linecap="round" d="M22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464c.974.974 1.3 2.343 1.41 4.536" />
-					</g>
-				</svg>
-            </div>
-          </picture>
-          <div class="flex flex-col gap-4">
-            <h1 class="text-white text-[28px] font-ESRebondGrotesqueTRIAL-Medium font-semibold ">
-				Resultados que Transforman tu Negocio
-			</h1>
-            <p class="text-[16px] text-white/50">
-				Con ENKODE, puedes esperar resultados medibles que impactan positivamente en tu negocio. Desde el aumento de la eficiencia operativa hasta la mejora de la seguridad de tus datos, nuestras soluciones están diseñadas para generar un crecimiento sostenible y una ventaja competitiva en tu industria.
-			</p>
-          </div>
-        </section>
-        
-      </article>
-  </div>
+			>
+				<picture>
+					<div class="p-2">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="text-[60px] text-white"
+							width="1em"
+							height="1em"
+							viewBox="0 0 36 36"
+							{...$$props}
+						>
+							<path
+								fill="currentColor"
+								d="M12 16.14h-.87a8.67 8.67 0 0 0-6.43 2.52l-.24.28v8.28h4.08v-4.7l.55-.62l.25-.29a11 11 0 0 1 4.71-2.86A6.59 6.59 0 0 1 12 16.14"
+								class="clr-i-solid clr-i-solid-path-1"
+							/>
+							<path
+								fill="currentColor"
+								d="M31.34 18.63a8.67 8.67 0 0 0-6.43-2.52a10.47 10.47 0 0 0-1.09.06a6.59 6.59 0 0 1-2 2.45a10.91 10.91 0 0 1 5 3l.25.28l.54.62v4.71h3.94v-8.32Z"
+								class="clr-i-solid clr-i-solid-path-2"
+							/>
+							<path
+								fill="currentColor"
+								d="M11.1 14.19h.31a6.45 6.45 0 0 1 3.11-6.29a4.09 4.09 0 1 0-3.42 6.33Z"
+								class="clr-i-solid clr-i-solid-path-3"
+							/>
+							<path
+								fill="currentColor"
+								d="M24.43 13.44a6.54 6.54 0 0 1 0 .69a4.09 4.09 0 0 0 .58.05h.19A4.09 4.09 0 1 0 21.47 8a6.53 6.53 0 0 1 2.96 5.44"
+								class="clr-i-solid clr-i-solid-path-4"
+							/>
+							<circle
+								cx="17.87"
+								cy="13.45"
+								r="4.47"
+								fill="currentColor"
+								class="clr-i-solid clr-i-solid-path-5"
+							/>
+							<path
+								fill="currentColor"
+								d="M18.11 20.3A9.69 9.69 0 0 0 11 23l-.25.28v6.33a1.57 1.57 0 0 0 1.6 1.54h11.49a1.57 1.57 0 0 0 1.6-1.54V23.3l-.24-.3a9.58 9.58 0 0 0-7.09-2.7"
+								class="clr-i-solid clr-i-solid-path-6"
+							/>
+							<path fill="none" d="M0 0h36v36H0z" />
+						</svg>
+					</div>
+				</picture>
+				<div class="flex flex-col gap-4">
+					<h1 class="text-white text-[28px] font-ESRebondGrotesqueTRIAL-Medium font-semibold">
+						Conoce a Nuestros Expertos
+					</h1>
+					<p class="text-[16px] text-white/50">
+						Nuestro equipo está compuesto por profesionales altamente calificados y apasionados por
+						la tecnología. Cada miembro de nuestro equipo aporta una vasta experiencia y un enfoque
+						dedicado para ofrecer soluciones innovadoras y eficaces. Con ENKODE, tienes a los
+						mejores expertos trabajando para ti.
+					</p>
+				</div>
+			</section>
+
+			<section
+				class="flex flex-col lg:flex-row justify-center items-center rounded-2xl gap-14 p-6"
+				style="background: linear-gradient(113.01deg, #1C1C1C 0%, #3D3D3D 45.8%, #454545 100%);
+          "
+			>
+				<picture>
+					<div class="p-2">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="text-[60px] text-white"
+							width="1em"
+							height="1em"
+							viewBox="0 0 24 24"
+							{...$$props}
+						>
+							<g fill="none" stroke="currentColor" stroke-width="1.5">
+								<circle cx="16" cy="8" r="2" />
+								<path
+									stroke-linecap="round"
+									d="m2 12.5l1.752-1.533a2.3 2.3 0 0 1 3.14.105l4.29 4.29a2 2 0 0 0 2.564.222l.299-.21a3 3 0 0 1 3.731.225L21 18.5"
+								/>
+								<path
+									stroke-linecap="round"
+									d="M22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464c.974.974 1.3 2.343 1.41 4.536"
+								/>
+							</g>
+						</svg>
+					</div>
+				</picture>
+				<div class="flex flex-col gap-4">
+					<h1 class="text-white text-[28px] font-ESRebondGrotesqueTRIAL-Medium font-semibold">
+						Resultados que Transforman tu Negocio
+					</h1>
+					<p class="text-[16px] text-white/50">
+						Con ENKODE, puedes esperar resultados medibles que impactan positivamente en tu negocio.
+						Desde el aumento de la eficiencia operativa hasta la mejora de la seguridad de tus
+						datos, nuestras soluciones están diseñadas para generar un crecimiento sostenible y una
+						ventaja competitiva en tu industria.
+					</p>
+				</div>
+			</section>
+		</article>
+	</div>
 </section>
